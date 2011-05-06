@@ -7,6 +7,7 @@
 //
 
 #import "HtmlDocumentViewAppDelegate.h"
+#import "HDVFactory.h"
 
 @implementation HtmlDocumentViewAppDelegate
 
@@ -16,6 +17,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    //load the root html
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"root" ofType:@"html"];  
+    NSData *htmlData = [NSData dataWithContentsOfFile:filePath];
+    self.window.rootViewController = [HDVFactory controllerFromHtmlData:htmlData];
     [self.window makeKeyAndVisible];
     return YES;
 }
