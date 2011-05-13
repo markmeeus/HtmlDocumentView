@@ -14,7 +14,4 @@
 }
 +(UIViewController*) controllerFromHtmlData:(NSData*)htmlData;
 
-+(UIView*) viewFromHtmlElement:(APElement*) element;
-
-+(UIView*) allocViewForElement:(APElement*) element;
 @end

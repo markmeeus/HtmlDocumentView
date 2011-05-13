@@ -19,6 +19,12 @@
 		36DD0CCD1371E3D200BFEDA1 /* APElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD0CC71371E3D200BFEDA1 /* APElement.m */; };
 		36DD0CCE1371E3D200BFEDA1 /* APDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD0CC91371E3D200BFEDA1 /* APDocument.m */; };
 		36DD0CCF1371E3D200BFEDA1 /* APAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD0CCB1371E3D200BFEDA1 /* APAttribute.m */; };
+		36E50904137D7C7C00AAD411 /* PViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E50903137D7C7B00AAD411 /* PViewFactory.m */; };
+		36E50907137D7CA300AAD411 /* ULViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E50906137D7CA300AAD411 /* ULViewFactory.m */; };
+		36E5090A137D7CBA00AAD411 /* LIViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E50909137D7CBA00AAD411 /* LIViewFactory.m */; };
+		36E5090D137D7CC900AAD411 /* BaseViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E5090C137D7CC800AAD411 /* BaseViewFactory.m */; };
+		36E50918137D808D00AAD411 /* SPANViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E50917137D808D00AAD411 /* SPANViewFactory.m */; };
+		36F3C1AE137DC33C00F8B5C1 /* LayoutEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3C1AD137DC33C00F8B5C1 /* LayoutEngine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +49,18 @@
 		36DD0CCA1371E3D200BFEDA1 /* APDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APDocument.h; path = HDV/Parser/APDocument.h; sourceTree = "<group>"; };
 		36DD0CCB1371E3D200BFEDA1 /* APAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APAttribute.m; path = HDV/Parser/APAttribute.m; sourceTree = "<group>"; };
 		36DD0CCC1371E3D200BFEDA1 /* APAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APAttribute.h; path = HDV/Parser/APAttribute.h; sourceTree = "<group>"; };
+		36E50902137D7C7B00AAD411 /* PViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PViewFactory.h; sourceTree = "<group>"; };
+		36E50903137D7C7B00AAD411 /* PViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PViewFactory.m; sourceTree = "<group>"; };
+		36E50905137D7CA300AAD411 /* ULViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULViewFactory.h; sourceTree = "<group>"; };
+		36E50906137D7CA300AAD411 /* ULViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULViewFactory.m; sourceTree = "<group>"; };
+		36E50908137D7CBA00AAD411 /* LIViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIViewFactory.h; sourceTree = "<group>"; };
+		36E50909137D7CBA00AAD411 /* LIViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIViewFactory.m; sourceTree = "<group>"; };
+		36E5090B137D7CC800AAD411 /* BaseViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewFactory.h; sourceTree = "<group>"; };
+		36E5090C137D7CC800AAD411 /* BaseViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewFactory.m; sourceTree = "<group>"; };
+		36E50916137D808D00AAD411 /* SPANViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPANViewFactory.h; sourceTree = "<group>"; };
+		36E50917137D808D00AAD411 /* SPANViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPANViewFactory.m; sourceTree = "<group>"; };
+		36F3C1AC137DC33C00F8B5C1 /* LayoutEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutEngine.h; sourceTree = "<group>"; };
+		36F3C1AD137DC33C00F8B5C1 /* LayoutEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutEngine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +131,9 @@
 		360460B21371D0F9004D1390 /* HDV */ = {
 			isa = PBXGroup;
 			children = (
+				36F3C1B2137DC4B200F8B5C1 /* Support */,
+				36F3C1AA137DC31E00F8B5C1 /* LayoutEngine */,
+				36E50900137D7C5700AAD411 /* ViewFactories */,
 				360460BB1371D464004D1390 /* HDVFactory.h */,
 				360460BA1371D464004D1390 /* HDVFactory.m */,
 				360460B61371D39A004D1390 /* Parsers */,
@@ -132,6 +153,39 @@
 				36DD0CCC1371E3D200BFEDA1 /* APAttribute.h */,
 			);
 			name = Parsers;
+			sourceTree = "<group>";
+		};
+		36E50900137D7C5700AAD411 /* ViewFactories */ = {
+			isa = PBXGroup;
+			children = (
+				36E50902137D7C7B00AAD411 /* PViewFactory.h */,
+				36E50903137D7C7B00AAD411 /* PViewFactory.m */,
+				36E50905137D7CA300AAD411 /* ULViewFactory.h */,
+				36E50906137D7CA300AAD411 /* ULViewFactory.m */,
+				36E50908137D7CBA00AAD411 /* LIViewFactory.h */,
+				36E50909137D7CBA00AAD411 /* LIViewFactory.m */,
+				36E5090B137D7CC800AAD411 /* BaseViewFactory.h */,
+				36E5090C137D7CC800AAD411 /* BaseViewFactory.m */,
+				36E50916137D808D00AAD411 /* SPANViewFactory.h */,
+				36E50917137D808D00AAD411 /* SPANViewFactory.m */,
+			);
+			name = ViewFactories;
+			sourceTree = "<group>";
+		};
+		36F3C1AA137DC31E00F8B5C1 /* LayoutEngine */ = {
+			isa = PBXGroup;
+			children = (
+				36F3C1AC137DC33C00F8B5C1 /* LayoutEngine.h */,
+				36F3C1AD137DC33C00F8B5C1 /* LayoutEngine.m */,
+			);
+			name = LayoutEngine;
+			sourceTree = "<group>";
+		};
+		36F3C1B2137DC4B200F8B5C1 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +257,12 @@
 				36DD0CCD1371E3D200BFEDA1 /* APElement.m in Sources */,
 				36DD0CCE1371E3D200BFEDA1 /* APDocument.m in Sources */,
 				36DD0CCF1371E3D200BFEDA1 /* APAttribute.m in Sources */,
+				36E50904137D7C7C00AAD411 /* PViewFactory.m in Sources */,
+				36E50907137D7CA300AAD411 /* ULViewFactory.m in Sources */,
+				36E5090A137D7CBA00AAD411 /* LIViewFactory.m in Sources */,
+				36E5090D137D7CC900AAD411 /* BaseViewFactory.m in Sources */,
+				36E50918137D808D00AAD411 /* SPANViewFactory.m in Sources */,
+				36F3C1AE137DC33C00F8B5C1 /* LayoutEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

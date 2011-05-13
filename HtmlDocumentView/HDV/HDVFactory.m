@@ -8,6 +8,9 @@
 
 #import "HDVFactory.h"
 #import "APXML.h"
+#import "BaseViewFactory.h"
+#import "APElement.h"
+#import "LayoutEngine.h"
 
 @implementation HDVFactory
 +(UIViewController*) controllerFromHtmlData:(NSData*)htmlData;
@@ -24,47 +27,19 @@
     UIViewController* controller = [[UIViewController alloc]init];
     
     //convert the document to the view
-    controller.view = [HDVFactory viewFromHtmlElement:document.rootElement];
+    UIView* view = [BaseViewFactory viewFromElement:document.rootElement];
+    
+    //start the layout engine!
+    [LayoutEngine layoutElement:document.rootElement];
+    
+    //assign to the controller
+    controller.view = view;
     
     //done
     [controller autorelease];
     return controller;
 }
 
-+(UIView*) viewFromHtmlElement:(APElement*) element;
-{
-    //create the view for the element
-    UIView* view = [HDVFactory allocViewForElement:element];
 
-    for(APElement *childElement in [element childElements])
-    {
-        UIView *subView = [HDVFactory viewFromHtmlElement:childElement];
-        [view addSubview:subView];
-    }
-    
-    [view autorelease];
-    return view;        
-    //for each child element, create the view and add as subview
-    
-}
 
-+(UIView*) allocViewForElement:(APElement*) element;
-{
-    UIView *view = nil;
-    if([element.name isEqualToString: @"ul"])
-    {
-        view = [[UITableView alloc]init];
-    }
-    if([element.name isEqualToString: @"span"])
-    {
-        view = [[UILabel alloc]init];
-        
-        [((UILabel*)view) setText:[element value]];
-        [((UILabel*)view) sizeToFit];
-    }
-    if(!view)
-        view = [[UIView alloc]init];
-    
-    return  view;
-}
 @end

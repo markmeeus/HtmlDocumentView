@@ -26,7 +26,7 @@
 
 @synthesize name;
 @synthesize parent;
-
+@synthesize HDVExtensions;
 /*
  Returns a new element with the specified tag name
 */
@@ -56,7 +56,7 @@
 		attributes = [[NSMutableDictionary alloc] init];
 		childElements = [[NSMutableArray alloc] init];
 	}
-	
+	self.HDVExtensions = [[[NSMutableDictionary alloc]init]autorelease];
 	return self;
 }
 

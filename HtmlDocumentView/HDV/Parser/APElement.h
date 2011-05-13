@@ -29,10 +29,13 @@
 	
 	NSMutableDictionary *attributes;
 	NSMutableArray *childElements;
+    
+    NSMutableDictionary* HDVExtensions;
 }
 
 @property (readonly) NSString *name;
 @property (nonatomic, assign) APElement *parent;
+@property (nonatomic, retain) NSMutableDictionary *HDVExtensions;
 
 + (id)elementWithName:(NSString*)aName;
 + (id)elementWithName:(NSString*)aName attributes:(NSDictionary*)someAttributes;
