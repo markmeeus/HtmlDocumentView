@@ -12,7 +12,8 @@
 @implementation PViewFactory
 +(UIView*)createView:(APElement *)element;
 {
-    UIView* view =  [[[UIView alloc]init] autorelease];
+    UIView* view =  [[[UILabel alloc]init] autorelease];
+    
     [((UILabel*)view) setText:[element value]];
     [((UILabel*)view) sizeToFit];
     return view;

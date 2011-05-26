@@ -12,5 +12,5 @@
 @interface LayoutEngine : NSObject {
     
 }
-+(void)layoutElement:(APElement*)element;
++(CGRect)layoutElement:(APElement*)element startingAt:(CGPoint) point;
 @end

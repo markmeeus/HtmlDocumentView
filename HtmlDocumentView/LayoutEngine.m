@@ -8,23 +8,40 @@
 
 #import "LayoutEngine.h"
 #import "APElement.h"
+#import <QuartzCore/QuartzCore.h>
+
 
 @implementation LayoutEngine
 
-+(void)layoutElement:(APElement*)element;
++(CGRect)layoutElement:(APElement*)element startingAt:(CGPoint) point;
 {
-    //pseudo flow:
-    //start with recursive call for all children to get the size of the current element
+    int x,y,width,height, totalChildHeight;
+    x=point.x;y=point.y;width = 0;height=0;totalChildHeight=0;
+    
+    //recursively layout all child elements
     for(APElement* childElement in element.childElements)
     {
-        //make the child do it's layout
-        [LayoutEngine layoutElement:childElement];
-        //TODOget the childs size and assign it to a frame
-            
+     
+        CGPoint point = CGPointMake(x, y);
+        CGRect elementFrame = [LayoutEngine layoutElement:childElement startingAt:point];
+        y = elementFrame.origin.y + elementFrame.size.height;
+        //increase y. This is pure block level stuff
+        totalChildHeight += elementFrame.size.height;
+                    
     }
-    //TODO: apply sizes, padding and borders
+    //all child elements have a layout, let's layout this!
+    UIView *thisView = ((UIView*)[element.HDVExtensions objectForKey:@"view"]);
+    CGRect thisFrame = thisView.frame;
+
+    //add the height of the childframes
+    thisFrame = CGRectMake(point.x, point.y , thisFrame.size.width, thisFrame.size.height );
+    thisView.frame = thisFrame;                       
     
-    //apply them to the view
-    //
+    //add border around view
+    [thisView.layer setBorderColor: [[UIColor blackColor] CGColor]];
+    [thisView.layer setBorderWidth: 2.0];
+
+    
+    return thisFrame;
 }
 @end

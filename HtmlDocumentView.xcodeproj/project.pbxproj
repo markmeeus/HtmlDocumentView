@@ -14,16 +14,14 @@
 		360460A61371D0F3004D1390 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 360460A51371D0F3004D1390 /* main.m */; };
 		360460A91371D0F3004D1390 /* HtmlDocumentViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 360460A81371D0F3004D1390 /* HtmlDocumentViewAppDelegate.m */; };
 		360460AC1371D0F3004D1390 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360460AA1371D0F3004D1390 /* MainWindow.xib */; };
-		360460BC1371D464004D1390 /* HDVFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 360460BA1371D464004D1390 /* HDVFactory.m */; };
+		360460BC1371D464004D1390 /* OQDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 360460BA1371D464004D1390 /* OQDocument.m */; };
 		360460BE1371D48D004D1390 /* root.html in Resources */ = {isa = PBXBuildFile; fileRef = 360460BD1371D48D004D1390 /* root.html */; };
+		364D8AC91386F7A3000859DB /* OQViewMaterializerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D8AC81386F7A3000859DB /* OQViewMaterializerBase.m */; };
+		364D8ACC1386F8D2000859DB /* OQParagraphViewMaterializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D8ACB1386F8D2000859DB /* OQParagraphViewMaterializer.m */; };
+		36561C60138706E40062C55E /* OQImageViewMaterializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36561C5F138706E40062C55E /* OQImageViewMaterializer.m */; };
 		36DD0CCD1371E3D200BFEDA1 /* APElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD0CC71371E3D200BFEDA1 /* APElement.m */; };
 		36DD0CCE1371E3D200BFEDA1 /* APDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD0CC91371E3D200BFEDA1 /* APDocument.m */; };
 		36DD0CCF1371E3D200BFEDA1 /* APAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD0CCB1371E3D200BFEDA1 /* APAttribute.m */; };
-		36E50904137D7C7C00AAD411 /* PViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E50903137D7C7B00AAD411 /* PViewFactory.m */; };
-		36E50907137D7CA300AAD411 /* ULViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E50906137D7CA300AAD411 /* ULViewFactory.m */; };
-		36E5090A137D7CBA00AAD411 /* LIViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E50909137D7CBA00AAD411 /* LIViewFactory.m */; };
-		36E5090D137D7CC900AAD411 /* BaseViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E5090C137D7CC800AAD411 /* BaseViewFactory.m */; };
-		36E50918137D808D00AAD411 /* SPANViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E50917137D808D00AAD411 /* SPANViewFactory.m */; };
 		36F3C1AE137DC33C00F8B5C1 /* LayoutEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3C1AD137DC33C00F8B5C1 /* LayoutEngine.m */; };
 /* End PBXBuildFile section */
 
@@ -39,9 +37,16 @@
 		360460A71371D0F3004D1390 /* HtmlDocumentViewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HtmlDocumentViewAppDelegate.h; sourceTree = "<group>"; };
 		360460A81371D0F3004D1390 /* HtmlDocumentViewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HtmlDocumentViewAppDelegate.m; sourceTree = "<group>"; };
 		360460AB1371D0F3004D1390 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		360460BA1371D464004D1390 /* HDVFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HDVFactory.m; path = HDV/HDVFactory.m; sourceTree = "<group>"; };
-		360460BB1371D464004D1390 /* HDVFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HDVFactory.h; path = HDV/HDVFactory.h; sourceTree = "<group>"; };
+		360460BA1371D464004D1390 /* OQDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OQDocument.m; path = HDV/OQDocument.m; sourceTree = "<group>"; };
+		360460BB1371D464004D1390 /* OQDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OQDocument.h; path = HDV/OQDocument.h; sourceTree = "<group>"; };
 		360460BD1371D48D004D1390 /* root.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = root.html; sourceTree = "<group>"; };
+		360EDBF0138ECF7E00F2877E /* OQViewMaterializers.h */ = {isa = PBXFileReference; fileEncoding = 4; path = OQViewMaterializers.h; sourceTree = "<group>"; };
+		364D8AC71386F7A3000859DB /* OQViewMaterializerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQViewMaterializerBase.h; sourceTree = "<group>"; };
+		364D8AC81386F7A3000859DB /* OQViewMaterializerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQViewMaterializerBase.m; sourceTree = "<group>"; };
+		364D8ACA1386F8D2000859DB /* OQParagraphViewMaterializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQParagraphViewMaterializer.h; sourceTree = "<group>"; };
+		364D8ACB1386F8D2000859DB /* OQParagraphViewMaterializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQParagraphViewMaterializer.m; sourceTree = "<group>"; };
+		36561C5E138706E40062C55E /* OQImageViewMaterializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQImageViewMaterializer.h; sourceTree = "<group>"; };
+		36561C5F138706E40062C55E /* OQImageViewMaterializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQImageViewMaterializer.m; sourceTree = "<group>"; };
 		36DD0CC61371E3D200BFEDA1 /* APXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APXML.h; path = HDV/Parser/APXML.h; sourceTree = "<group>"; };
 		36DD0CC71371E3D200BFEDA1 /* APElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APElement.m; path = HDV/Parser/APElement.m; sourceTree = "<group>"; };
 		36DD0CC81371E3D200BFEDA1 /* APElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APElement.h; path = HDV/Parser/APElement.h; sourceTree = "<group>"; };
@@ -49,16 +54,6 @@
 		36DD0CCA1371E3D200BFEDA1 /* APDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APDocument.h; path = HDV/Parser/APDocument.h; sourceTree = "<group>"; };
 		36DD0CCB1371E3D200BFEDA1 /* APAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APAttribute.m; path = HDV/Parser/APAttribute.m; sourceTree = "<group>"; };
 		36DD0CCC1371E3D200BFEDA1 /* APAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APAttribute.h; path = HDV/Parser/APAttribute.h; sourceTree = "<group>"; };
-		36E50902137D7C7B00AAD411 /* PViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PViewFactory.h; sourceTree = "<group>"; };
-		36E50903137D7C7B00AAD411 /* PViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PViewFactory.m; sourceTree = "<group>"; };
-		36E50905137D7CA300AAD411 /* ULViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULViewFactory.h; sourceTree = "<group>"; };
-		36E50906137D7CA300AAD411 /* ULViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULViewFactory.m; sourceTree = "<group>"; };
-		36E50908137D7CBA00AAD411 /* LIViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIViewFactory.h; sourceTree = "<group>"; };
-		36E50909137D7CBA00AAD411 /* LIViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIViewFactory.m; sourceTree = "<group>"; };
-		36E5090B137D7CC800AAD411 /* BaseViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewFactory.h; sourceTree = "<group>"; };
-		36E5090C137D7CC800AAD411 /* BaseViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewFactory.m; sourceTree = "<group>"; };
-		36E50916137D808D00AAD411 /* SPANViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPANViewFactory.h; sourceTree = "<group>"; };
-		36E50917137D808D00AAD411 /* SPANViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPANViewFactory.m; sourceTree = "<group>"; };
 		36F3C1AC137DC33C00F8B5C1 /* LayoutEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutEngine.h; sourceTree = "<group>"; };
 		36F3C1AD137DC33C00F8B5C1 /* LayoutEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutEngine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,7 +102,7 @@
 		3604609E1371D0F3004D1390 /* HtmlDocumentView */ = {
 			isa = PBXGroup;
 			children = (
-				360460B21371D0F9004D1390 /* HDV */,
+				360460B21371D0F9004D1390 /* OQuery */,
 				360460A71371D0F3004D1390 /* HtmlDocumentViewAppDelegate.h */,
 				360460A81371D0F3004D1390 /* HtmlDocumentViewAppDelegate.m */,
 				360460AA1371D0F3004D1390 /* MainWindow.xib */,
@@ -128,17 +123,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		360460B21371D0F9004D1390 /* HDV */ = {
+		360460B21371D0F9004D1390 /* OQuery */ = {
 			isa = PBXGroup;
 			children = (
+				364D8AC61386F77E000859DB /* Materlializers */,
 				36F3C1B2137DC4B200F8B5C1 /* Support */,
 				36F3C1AA137DC31E00F8B5C1 /* LayoutEngine */,
-				36E50900137D7C5700AAD411 /* ViewFactories */,
-				360460BB1371D464004D1390 /* HDVFactory.h */,
-				360460BA1371D464004D1390 /* HDVFactory.m */,
+				360460BB1371D464004D1390 /* OQDocument.h */,
+				360460BA1371D464004D1390 /* OQDocument.m */,
 				360460B61371D39A004D1390 /* Parsers */,
 			);
-			name = HDV;
+			name = OQuery;
 			sourceTree = "<group>";
 		};
 		360460B61371D39A004D1390 /* Parsers */ = {
@@ -155,21 +150,18 @@
 			name = Parsers;
 			sourceTree = "<group>";
 		};
-		36E50900137D7C5700AAD411 /* ViewFactories */ = {
+		364D8AC61386F77E000859DB /* Materlializers */ = {
 			isa = PBXGroup;
 			children = (
-				36E50902137D7C7B00AAD411 /* PViewFactory.h */,
-				36E50903137D7C7B00AAD411 /* PViewFactory.m */,
-				36E50905137D7CA300AAD411 /* ULViewFactory.h */,
-				36E50906137D7CA300AAD411 /* ULViewFactory.m */,
-				36E50908137D7CBA00AAD411 /* LIViewFactory.h */,
-				36E50909137D7CBA00AAD411 /* LIViewFactory.m */,
-				36E5090B137D7CC800AAD411 /* BaseViewFactory.h */,
-				36E5090C137D7CC800AAD411 /* BaseViewFactory.m */,
-				36E50916137D808D00AAD411 /* SPANViewFactory.h */,
-				36E50917137D808D00AAD411 /* SPANViewFactory.m */,
+				364D8AC71386F7A3000859DB /* OQViewMaterializerBase.h */,
+				364D8AC81386F7A3000859DB /* OQViewMaterializerBase.m */,
+				364D8ACA1386F8D2000859DB /* OQParagraphViewMaterializer.h */,
+				364D8ACB1386F8D2000859DB /* OQParagraphViewMaterializer.m */,
+				36561C5E138706E40062C55E /* OQImageViewMaterializer.h */,
+				36561C5F138706E40062C55E /* OQImageViewMaterializer.m */,
+				360EDBF0138ECF7E00F2877E /* OQViewMaterializers.h */,
 			);
-			name = ViewFactories;
+			name = Materlializers;
 			sourceTree = "<group>";
 		};
 		36F3C1AA137DC31E00F8B5C1 /* LayoutEngine */ = {
@@ -253,16 +245,14 @@
 			files = (
 				360460A61371D0F3004D1390 /* main.m in Sources */,
 				360460A91371D0F3004D1390 /* HtmlDocumentViewAppDelegate.m in Sources */,
-				360460BC1371D464004D1390 /* HDVFactory.m in Sources */,
+				360460BC1371D464004D1390 /* OQDocument.m in Sources */,
 				36DD0CCD1371E3D200BFEDA1 /* APElement.m in Sources */,
 				36DD0CCE1371E3D200BFEDA1 /* APDocument.m in Sources */,
 				36DD0CCF1371E3D200BFEDA1 /* APAttribute.m in Sources */,
-				36E50904137D7C7C00AAD411 /* PViewFactory.m in Sources */,
-				36E50907137D7CA300AAD411 /* ULViewFactory.m in Sources */,
-				36E5090A137D7CBA00AAD411 /* LIViewFactory.m in Sources */,
-				36E5090D137D7CC900AAD411 /* BaseViewFactory.m in Sources */,
-				36E50918137D808D00AAD411 /* SPANViewFactory.m in Sources */,
 				36F3C1AE137DC33C00F8B5C1 /* LayoutEngine.m in Sources */,
+				364D8AC91386F7A3000859DB /* OQViewMaterializerBase.m in Sources */,
+				364D8ACC1386F8D2000859DB /* OQParagraphViewMaterializer.m in Sources */,
+				36561C60138706E40062C55E /* OQImageViewMaterializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

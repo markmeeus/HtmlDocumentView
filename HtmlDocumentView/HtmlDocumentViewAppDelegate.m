@@ -7,7 +7,7 @@
 //
 
 #import "HtmlDocumentViewAppDelegate.h"
-#import "HDVFactory.h"
+#import "OQDocument.h"
 
 @implementation HtmlDocumentViewAppDelegate
 
@@ -20,8 +20,11 @@
     //load the root html
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"root" ofType:@"html"];  
     NSData *htmlData = [NSData dataWithContentsOfFile:filePath];
-    self.window.rootViewController = [HDVFactory controllerFromHtmlData:htmlData];
+    OQDocument* document = [[OQDocument alloc]init];
+    self.window.rootViewController = [document controllerFromHtmlData:htmlData];
     [self.window makeKeyAndVisible];
+
+    [document release];
     return YES;
 }
 
