@@ -9,6 +9,7 @@
 #import "TestOQSelectors.h"
 #import "OQSelectorChainBuilder.h"
 #import "OQElementSelector.h"
+#import "OQChainSelector.h"
 
 @implementation TestOQSelectors
 -(void) setUp
@@ -30,8 +31,7 @@
 -(void) testSelectSingleFirstElement
 {
     NSArray *selectorChain = [OQSelectorChainBuilder buildSelectorChainForString:@"body"];
-    OQElementSelector *selector = [selectorChain objectAtIndex:0];
-    NSArray *selectedElements = [selector selectElementsFromElement:document.rootElement];
+    NSArray *selectedElements = [OQChainSelector selectAllElementsForSelectorChain:selectorChain startingFromElement:document.rootElement];
     STAssertEquals([selectedElements count], 1U, @"");
     APElement *element = [selectedElements objectAtIndex:0];
     STAssertEqualObjects(element.name, @"body",@"");
@@ -40,9 +40,8 @@
 -(void) testSelectClassOnlySelector
 {
     NSArray *selectorChain = [OQSelectorChainBuilder buildSelectorChainForString:@".test"];
-    OQElementSelector *selector = [selectorChain objectAtIndex:0];
-    NSArray *selectedElements = [selector selectElementsFromElement:document.rootElement];
-    STAssertEquals([selectedElements count], 2U, @"");
+    NSArray *selectedElements = [OQChainSelector selectAllElementsForSelectorChain:selectorChain startingFromElement:document.rootElement];
+    STAssertEquals([selectedElements count], 3U, @"");
     id firstElement = [selectedElements objectAtIndex:0];
     STAssertEqualObjects([firstElement name], @"p",@"");
     id secondElement = [selectedElements objectAtIndex:1];
@@ -53,8 +52,7 @@
 -(void) testSelectElementAndClassSelector
 {
     NSArray *selectorChain = [OQSelectorChainBuilder buildSelectorChainForString:@"p.test"];
-    OQElementSelector *selector = [selectorChain objectAtIndex:0];
-    NSArray *selectedElements = [selector selectElementsFromElement:document.rootElement];
+    NSArray *selectedElements = [OQChainSelector selectAllElementsForSelectorChain:selectorChain startingFromElement:document.rootElement];   
     STAssertEquals([selectedElements count], 1U, @"");
     id firstElement = [selectedElements objectAtIndex:0];
     STAssertEqualObjects([firstElement name], @"p",@"");    
@@ -62,11 +60,11 @@
 
 -(void) testSelectMultipleClassSelector
 {
-    NSArray *selectorChain = [OQSelectorChainBuilder buildSelectorChainForString:@".test.avatar"];
-    OQElementSelector *selector = [selectorChain objectAtIndex:0];
-    NSArray *selectedElements = [selector selectElementsFromElement:document.rootElement];
+    NSArray *selectorChain = [OQSelectorChainBuilder buildSelectorChainForString:@"ul li.test img.avatar .highlighted"];
+    NSArray *selectedElements = [OQChainSelector selectAllElementsForSelectorChain:selectorChain startingFromElement:document.rootElement];
     STAssertEquals([selectedElements count], 1U, @"");
     id firstElement = [selectedElements objectAtIndex:0];
     STAssertEqualObjects([firstElement name], @"img",@"");    
 }
+
 @end

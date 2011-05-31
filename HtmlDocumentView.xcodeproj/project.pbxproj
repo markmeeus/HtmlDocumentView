@@ -26,6 +26,8 @@
 		365955BA139580930098EACD /* TestOQSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = 365955B8139580580098EACD /* TestOQSelectors.m */; };
 		365955BB139581BF0098EACD /* APDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD0CC91371E3D200BFEDA1 /* APDocument.m */; };
 		365955BE139582ED0098EACD /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 365955BC139582A30098EACD /* test.html */; };
+		365955C113958C590098EACD /* OQChainSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 365955C013958C590098EACD /* OQChainSelector.m */; };
+		365955C213958C8A0098EACD /* OQChainSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 365955C013958C590098EACD /* OQChainSelector.m */; };
 		36DD0CCD1371E3D200BFEDA1 /* APElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD0CC71371E3D200BFEDA1 /* APElement.m */; };
 		36DD0CCE1371E3D200BFEDA1 /* APDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD0CC91371E3D200BFEDA1 /* APDocument.m */; };
 		36DD0CCF1371E3D200BFEDA1 /* APAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD0CCB1371E3D200BFEDA1 /* APAttribute.m */; };
@@ -68,6 +70,8 @@
 		365955B7139580580098EACD /* TestOQSelectors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOQSelectors.h; sourceTree = "<group>"; };
 		365955B8139580580098EACD /* TestOQSelectors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOQSelectors.m; sourceTree = "<group>"; };
 		365955BC139582A30098EACD /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		365955BF13958C590098EACD /* OQChainSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQChainSelector.h; sourceTree = "<group>"; };
+		365955C013958C590098EACD /* OQChainSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQChainSelector.m; sourceTree = "<group>"; };
 		36DD0CC61371E3D200BFEDA1 /* APXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APXML.h; path = HDV/Parser/APXML.h; sourceTree = "<group>"; };
 		36DD0CC71371E3D200BFEDA1 /* APElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APElement.m; path = HDV/Parser/APElement.m; sourceTree = "<group>"; };
 		36DD0CC81371E3D200BFEDA1 /* APElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APElement.h; path = HDV/Parser/APElement.h; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 				36E59BC713952B3500501ABA /* OQElementSelector.m */,
 				365955B213957A180098EACD /* OQAttributeValueSelector.h */,
 				365955B313957A180098EACD /* OQAttributeValueSelector.m */,
+				365955BF13958C590098EACD /* OQChainSelector.h */,
+				365955C013958C590098EACD /* OQChainSelector.m */,
 			);
 			name = Selectors;
 			sourceTree = "<group>";
@@ -389,6 +395,7 @@
 				36E59BC513952B1900501ABA /* OQSelectorChainBuilder.m in Sources */,
 				36E59BC813952B3500501ABA /* OQElementSelector.m in Sources */,
 				365955B413957A180098EACD /* OQAttributeValueSelector.m in Sources */,
+				365955C113958C590098EACD /* OQChainSelector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +410,7 @@
 				365955B6139580210098EACD /* APElement.m in Sources */,
 				365955BA139580930098EACD /* TestOQSelectors.m in Sources */,
 				365955BB139581BF0098EACD /* APDocument.m in Sources */,
+				365955C213958C8A0098EACD /* OQChainSelector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
