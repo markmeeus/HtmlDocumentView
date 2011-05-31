@@ -13,9 +13,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "360460931371D0F3004D1390"
-               BuildableName = "HtmlDocumentView.app"
-               BlueprintName = "HtmlDocumentView"
+               BlueprintIdentifier = "36E59B9013952A4300501ABA"
+               BuildableName = "HtmlDocumentView copy.app"
+               BlueprintName = "HtmlDocumentView copy"
                ReferencedContainer = "container:HtmlDocumentView.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -27,16 +27,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "36E59BAE13952A6400501ABA"
-               BuildableName = "TestOQuery.octest"
-               BlueprintName = "TestOQuery"
-               ReferencedContainer = "container:HtmlDocumentView.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -50,9 +40,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "360460931371D0F3004D1390"
-            BuildableName = "HtmlDocumentView.app"
-            BlueprintName = "HtmlDocumentView"
+            BlueprintIdentifier = "36E59B9013952A4300501ABA"
+            BuildableName = "HtmlDocumentView copy.app"
+            BlueprintName = "HtmlDocumentView copy"
             ReferencedContainer = "container:HtmlDocumentView.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -69,9 +59,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "360460931371D0F3004D1390"
-            BuildableName = "HtmlDocumentView.app"
-            BlueprintName = "HtmlDocumentView"
+            BlueprintIdentifier = "36E59B9013952A4300501ABA"
+            BuildableName = "HtmlDocumentView copy.app"
+            BlueprintName = "HtmlDocumentView copy"
             ReferencedContainer = "container:HtmlDocumentView.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

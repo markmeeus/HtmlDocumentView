@@ -4,15 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>HtmlDocumentView copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>HtmlDocumentView.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TestOQuery.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>360460931371D0F3004D1390</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>36E59B9013952A4300501ABA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>36E59BAE13952A6400501ABA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

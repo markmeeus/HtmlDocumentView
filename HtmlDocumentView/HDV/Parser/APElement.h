@@ -56,5 +56,4 @@
 - (NSString*)encodeEntities:(NSMutableString*)aString;
 - (NSString*)prettyXML:(int)tabs;
 - (NSString*)xml;
-
 @end

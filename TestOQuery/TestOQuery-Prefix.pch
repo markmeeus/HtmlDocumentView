@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'TestOQuery' target in the 'TestOQuery' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

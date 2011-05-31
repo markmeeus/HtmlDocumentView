@@ -19,9 +19,25 @@
 		364D8AC91386F7A3000859DB /* OQViewMaterializerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D8AC81386F7A3000859DB /* OQViewMaterializerBase.m */; };
 		364D8ACC1386F8D2000859DB /* OQParagraphViewMaterializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D8ACB1386F8D2000859DB /* OQParagraphViewMaterializer.m */; };
 		36561C60138706E40062C55E /* OQImageViewMaterializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36561C5F138706E40062C55E /* OQImageViewMaterializer.m */; };
+		365955B01395735A0098EACD /* OQElementSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E59BC713952B3500501ABA /* OQElementSelector.m */; };
+		365955B413957A180098EACD /* OQAttributeValueSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 365955B313957A180098EACD /* OQAttributeValueSelector.m */; };
+		365955B513957A490098EACD /* OQAttributeValueSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 365955B313957A180098EACD /* OQAttributeValueSelector.m */; };
+		365955B6139580210098EACD /* APElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD0CC71371E3D200BFEDA1 /* APElement.m */; };
+		365955BA139580930098EACD /* TestOQSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = 365955B8139580580098EACD /* TestOQSelectors.m */; };
+		365955BB139581BF0098EACD /* APDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD0CC91371E3D200BFEDA1 /* APDocument.m */; };
+		365955BE139582ED0098EACD /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 365955BC139582A30098EACD /* test.html */; };
 		36DD0CCD1371E3D200BFEDA1 /* APElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD0CC71371E3D200BFEDA1 /* APElement.m */; };
 		36DD0CCE1371E3D200BFEDA1 /* APDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD0CC91371E3D200BFEDA1 /* APDocument.m */; };
 		36DD0CCF1371E3D200BFEDA1 /* APAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DD0CCB1371E3D200BFEDA1 /* APAttribute.m */; };
+		36E59BB013952A6400501ABA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360460981371D0F3004D1390 /* UIKit.framework */; };
+		36E59BB113952A6400501ABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3604609A1371D0F3004D1390 /* Foundation.framework */; };
+		36E59BB213952A6400501ABA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3604609C1371D0F3004D1390 /* CoreGraphics.framework */; };
+		36E59BB813952A6400501ABA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36E59BB613952A6400501ABA /* InfoPlist.strings */; };
+		36E59BBB13952A6400501ABA /* TestOQSelectorChainBuilder.h in Resources */ = {isa = PBXBuildFile; fileRef = 36E59BBA13952A6400501ABA /* TestOQSelectorChainBuilder.h */; };
+		36E59BBD13952A6400501ABA /* TestOQSelectorChainBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E59BBC13952A6400501ABA /* TestOQSelectorChainBuilder.m */; };
+		36E59BC513952B1900501ABA /* OQSelectorChainBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E59BC413952B1800501ABA /* OQSelectorChainBuilder.m */; };
+		36E59BC813952B3500501ABA /* OQElementSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E59BC713952B3500501ABA /* OQElementSelector.m */; };
+		36E59BC913952B7F00501ABA /* OQSelectorChainBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E59BC413952B1800501ABA /* OQSelectorChainBuilder.m */; };
 		36F3C1AE137DC33C00F8B5C1 /* LayoutEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3C1AD137DC33C00F8B5C1 /* LayoutEngine.m */; };
 /* End PBXBuildFile section */
 
@@ -40,13 +56,18 @@
 		360460BA1371D464004D1390 /* OQDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OQDocument.m; path = HDV/OQDocument.m; sourceTree = "<group>"; };
 		360460BB1371D464004D1390 /* OQDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OQDocument.h; path = HDV/OQDocument.h; sourceTree = "<group>"; };
 		360460BD1371D48D004D1390 /* root.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = root.html; sourceTree = "<group>"; };
-		360EDBF0138ECF7E00F2877E /* OQViewMaterializers.h */ = {isa = PBXFileReference; fileEncoding = 4; path = OQViewMaterializers.h; sourceTree = "<group>"; };
+		360EDBF0138ECF7E00F2877E /* OQViewMaterializers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQViewMaterializers.h; sourceTree = "<group>"; };
 		364D8AC71386F7A3000859DB /* OQViewMaterializerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQViewMaterializerBase.h; sourceTree = "<group>"; };
 		364D8AC81386F7A3000859DB /* OQViewMaterializerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQViewMaterializerBase.m; sourceTree = "<group>"; };
 		364D8ACA1386F8D2000859DB /* OQParagraphViewMaterializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQParagraphViewMaterializer.h; sourceTree = "<group>"; };
 		364D8ACB1386F8D2000859DB /* OQParagraphViewMaterializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQParagraphViewMaterializer.m; sourceTree = "<group>"; };
 		36561C5E138706E40062C55E /* OQImageViewMaterializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQImageViewMaterializer.h; sourceTree = "<group>"; };
 		36561C5F138706E40062C55E /* OQImageViewMaterializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQImageViewMaterializer.m; sourceTree = "<group>"; };
+		365955B213957A180098EACD /* OQAttributeValueSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQAttributeValueSelector.h; sourceTree = "<group>"; };
+		365955B313957A180098EACD /* OQAttributeValueSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQAttributeValueSelector.m; sourceTree = "<group>"; };
+		365955B7139580580098EACD /* TestOQSelectors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOQSelectors.h; sourceTree = "<group>"; };
+		365955B8139580580098EACD /* TestOQSelectors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOQSelectors.m; sourceTree = "<group>"; };
+		365955BC139582A30098EACD /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		36DD0CC61371E3D200BFEDA1 /* APXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APXML.h; path = HDV/Parser/APXML.h; sourceTree = "<group>"; };
 		36DD0CC71371E3D200BFEDA1 /* APElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APElement.m; path = HDV/Parser/APElement.m; sourceTree = "<group>"; };
 		36DD0CC81371E3D200BFEDA1 /* APElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APElement.h; path = HDV/Parser/APElement.h; sourceTree = "<group>"; };
@@ -54,6 +75,16 @@
 		36DD0CCA1371E3D200BFEDA1 /* APDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APDocument.h; path = HDV/Parser/APDocument.h; sourceTree = "<group>"; };
 		36DD0CCB1371E3D200BFEDA1 /* APAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APAttribute.m; path = HDV/Parser/APAttribute.m; sourceTree = "<group>"; };
 		36DD0CCC1371E3D200BFEDA1 /* APAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APAttribute.h; path = HDV/Parser/APAttribute.h; sourceTree = "<group>"; };
+		36E59BAF13952A6400501ABA /* TestOQuery.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestOQuery.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36E59BB513952A6400501ABA /* TestOQuery-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestOQuery-Info.plist"; sourceTree = "<group>"; };
+		36E59BB713952A6400501ABA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		36E59BB913952A6400501ABA /* TestOQuery-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestOQuery-Prefix.pch"; sourceTree = "<group>"; };
+		36E59BBA13952A6400501ABA /* TestOQSelectorChainBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOQSelectorChainBuilder.h; sourceTree = "<group>"; };
+		36E59BBC13952A6400501ABA /* TestOQSelectorChainBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOQSelectorChainBuilder.m; sourceTree = "<group>"; };
+		36E59BC313952B1800501ABA /* OQSelectorChainBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQSelectorChainBuilder.h; sourceTree = "<group>"; };
+		36E59BC413952B1800501ABA /* OQSelectorChainBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQSelectorChainBuilder.m; sourceTree = "<group>"; };
+		36E59BC613952B3500501ABA /* OQElementSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQElementSelector.h; sourceTree = "<group>"; };
+		36E59BC713952B3500501ABA /* OQElementSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQElementSelector.m; sourceTree = "<group>"; };
 		36F3C1AC137DC33C00F8B5C1 /* LayoutEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutEngine.h; sourceTree = "<group>"; };
 		36F3C1AD137DC33C00F8B5C1 /* LayoutEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutEngine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +100,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		36E59BAB13952A6400501ABA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36E59BB013952A6400501ABA /* UIKit.framework in Frameworks */,
+				36E59BB113952A6400501ABA /* Foundation.framework in Frameworks */,
+				36E59BB213952A6400501ABA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				3604609E1371D0F3004D1390 /* HtmlDocumentView */,
+				36E59BB313952A6400501ABA /* TestOQuery */,
 				360460971371D0F3004D1390 /* Frameworks */,
 				360460951371D0F3004D1390 /* Products */,
 			);
@@ -85,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				360460941371D0F3004D1390 /* HtmlDocumentView.app */,
+				36E59BAF13952A6400501ABA /* TestOQuery.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,6 +169,7 @@
 		360460B21371D0F9004D1390 /* OQuery */ = {
 			isa = PBXGroup;
 			children = (
+				36E59BC213952A8E00501ABA /* Selectors */,
 				364D8AC61386F77E000859DB /* Materlializers */,
 				36F3C1B2137DC4B200F8B5C1 /* Support */,
 				36F3C1AA137DC31E00F8B5C1 /* LayoutEngine */,
@@ -164,6 +208,50 @@
 			name = Materlializers;
 			sourceTree = "<group>";
 		};
+		36E59BB313952A6400501ABA /* TestOQuery */ = {
+			isa = PBXGroup;
+			children = (
+				36E59BC113952A8400501ABA /* selectors */,
+				36E59BB413952A6400501ABA /* Supporting Files */,
+			);
+			path = TestOQuery;
+			sourceTree = "<group>";
+		};
+		36E59BB413952A6400501ABA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				36E59BB513952A6400501ABA /* TestOQuery-Info.plist */,
+				36E59BB613952A6400501ABA /* InfoPlist.strings */,
+				36E59BB913952A6400501ABA /* TestOQuery-Prefix.pch */,
+				365955BC139582A30098EACD /* test.html */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		36E59BC113952A8400501ABA /* selectors */ = {
+			isa = PBXGroup;
+			children = (
+				36E59BBA13952A6400501ABA /* TestOQSelectorChainBuilder.h */,
+				36E59BBC13952A6400501ABA /* TestOQSelectorChainBuilder.m */,
+				365955B7139580580098EACD /* TestOQSelectors.h */,
+				365955B8139580580098EACD /* TestOQSelectors.m */,
+			);
+			name = selectors;
+			sourceTree = "<group>";
+		};
+		36E59BC213952A8E00501ABA /* Selectors */ = {
+			isa = PBXGroup;
+			children = (
+				36E59BC313952B1800501ABA /* OQSelectorChainBuilder.h */,
+				36E59BC413952B1800501ABA /* OQSelectorChainBuilder.m */,
+				36E59BC613952B3500501ABA /* OQElementSelector.h */,
+				36E59BC713952B3500501ABA /* OQElementSelector.m */,
+				365955B213957A180098EACD /* OQAttributeValueSelector.h */,
+				365955B313957A180098EACD /* OQAttributeValueSelector.m */,
+			);
+			name = Selectors;
+			sourceTree = "<group>";
+		};
 		36F3C1AA137DC31E00F8B5C1 /* LayoutEngine */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +288,24 @@
 			productReference = 360460941371D0F3004D1390 /* HtmlDocumentView.app */;
 			productType = "com.apple.product-type.application";
 		};
+		36E59BAE13952A6400501ABA /* TestOQuery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36E59BBE13952A6400501ABA /* Build configuration list for PBXNativeTarget "TestOQuery" */;
+			buildPhases = (
+				36E59BAA13952A6400501ABA /* Sources */,
+				36E59BAB13952A6400501ABA /* Frameworks */,
+				36E59BAC13952A6400501ABA /* Resources */,
+				36E59BAD13952A6400501ABA /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestOQuery;
+			productName = TestOQuery;
+			productReference = 36E59BAF13952A6400501ABA /* TestOQuery.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -221,6 +327,7 @@
 			projectRoot = "";
 			targets = (
 				360460931371D0F3004D1390 /* HtmlDocumentView */,
+				36E59BAE13952A6400501ABA /* TestOQuery */,
 			);
 		};
 /* End PBXProject section */
@@ -236,7 +343,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		36E59BAC13952A6400501ABA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36E59BB813952A6400501ABA /* InfoPlist.strings in Resources */,
+				36E59BBB13952A6400501ABA /* TestOQSelectorChainBuilder.h in Resources */,
+				365955BE139582ED0098EACD /* test.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36E59BAD13952A6400501ABA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		360460901371D0F3004D1390 /* Sources */ = {
@@ -253,6 +386,23 @@
 				364D8AC91386F7A3000859DB /* OQViewMaterializerBase.m in Sources */,
 				364D8ACC1386F8D2000859DB /* OQParagraphViewMaterializer.m in Sources */,
 				36561C60138706E40062C55E /* OQImageViewMaterializer.m in Sources */,
+				36E59BC513952B1900501ABA /* OQSelectorChainBuilder.m in Sources */,
+				36E59BC813952B3500501ABA /* OQElementSelector.m in Sources */,
+				365955B413957A180098EACD /* OQAttributeValueSelector.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36E59BAA13952A6400501ABA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36E59BBD13952A6400501ABA /* TestOQSelectorChainBuilder.m in Sources */,
+				36E59BC913952B7F00501ABA /* OQSelectorChainBuilder.m in Sources */,
+				365955B01395735A0098EACD /* OQElementSelector.m in Sources */,
+				365955B513957A490098EACD /* OQAttributeValueSelector.m in Sources */,
+				365955B6139580210098EACD /* APElement.m in Sources */,
+				365955BA139580930098EACD /* TestOQSelectors.m in Sources */,
+				365955BB139581BF0098EACD /* APDocument.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +423,14 @@
 				360460AB1371D0F3004D1390 /* en */,
 			);
 			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		36E59BB613952A6400501ABA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36E59BB713952A6400501ABA /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -342,6 +500,48 @@
 			};
 			name = Release;
 		};
+		36E59BBF13952A6400501ABA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestOQuery/TestOQuery-Prefix.pch";
+				INFOPLIST_FILE = "TestOQuery/TestOQuery-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		36E59BC013952A6400501ABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestOQuery/TestOQuery-Prefix.pch";
+				INFOPLIST_FILE = "TestOQuery/TestOQuery-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -359,6 +559,15 @@
 			buildConfigurations = (
 				360460B01371D0F3004D1390 /* Debug */,
 				360460B11371D0F3004D1390 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36E59BBE13952A6400501ABA /* Build configuration list for PBXNativeTarget "TestOQuery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36E59BBF13952A6400501ABA /* Debug */,
+				36E59BC013952A6400501ABA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
