@@ -56,15 +56,36 @@
     STAssertEquals([selectedElements count], 1U, @"");
     id firstElement = [selectedElements objectAtIndex:0];
     STAssertEqualObjects([firstElement name], @"p",@"");    
+    
+    selectorChain = [OQSelectorChainBuilder buildSelectorChainForString:@"a.some-class"];
+    selectedElements = [OQChainSelector selectAllElementsForSelectorChain:selectorChain startingFromElement:document.rootElement];   
+    STAssertEquals([selectedElements count], 1U, @"");
+    firstElement = [selectedElements objectAtIndex:0];
+    STAssertEqualObjects([firstElement name], @"a",@"");    
+
 }
 
 -(void) testSelectMultipleClassSelector
 {
-    NSArray *selectorChain = [OQSelectorChainBuilder buildSelectorChainForString:@"ul li.test img.avatar .highlighted"];
+    NSArray *selectorChain = [OQSelectorChainBuilder buildSelectorChainForString:@"ul li.test img.avatar .some-class"];
     NSArray *selectedElements = [OQChainSelector selectAllElementsForSelectorChain:selectorChain startingFromElement:document.rootElement];
     STAssertEquals([selectedElements count], 1U, @"");
     id firstElement = [selectedElements objectAtIndex:0];
-    STAssertEqualObjects([firstElement name], @"img",@"");    
+    STAssertEqualObjects([firstElement name], @"a",@"");    
+}
+
+-(void) testSelectMultipleClassSelectorWithMultipleResults
+{
+    NSArray *selectorChain = [OQSelectorChainBuilder buildSelectorChainForString:@"ul .some-class"];
+    NSArray *selectedElements = [OQChainSelector selectAllElementsForSelectorChain:selectorChain startingFromElement:document.rootElement];
+    STAssertEquals([selectedElements count], 3U, @"");
+    id firstElement = [selectedElements objectAtIndex:0];
+    STAssertEqualObjects([firstElement name], @"a",@"");    
+    id secondElement = [selectedElements objectAtIndex:1];
+    STAssertEqualObjects([secondElement name], @"img",@"");    
+    id thirdElement = [selectedElements objectAtIndex:2];
+    STAssertEqualObjects([thirdElement name], @"p",@"");    
+
 }
 
 @end

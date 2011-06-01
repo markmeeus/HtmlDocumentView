@@ -415,12 +415,26 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "TestOQuery/TestOQSelectors.m"
-         timestampString = "328568721.936806"
+         timestampString = "328597047.389171"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "64"
-         endingLineNumber = "64"
+         startingLineNumber = "71"
+         endingLineNumber = "71"
          landmarkName = "-testSelectMultipleClassSelector"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "TestOQuery/TestOQSelectors.m"
+         timestampString = "328597047.389171"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "80"
+         endingLineNumber = "80"
+         landmarkName = "-testSelectMultipleClassSelectorWithMultipleResults"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
