@@ -13,6 +13,7 @@
 }
 @property (nonatomic, retain) id document;
 -(OQViewMaterializerBase*)getMaterializerForElement:(APElement*)element;
+-(void)applyStylesToViewForElement:(APElement*)element;
 -(UIView*)buildViewForElement:(APElement*)element;
 -(UIView*)createViewForElement:(APElement*)element;
 -(UIView*)createBorderFrameAroundView:(UIView*)view;

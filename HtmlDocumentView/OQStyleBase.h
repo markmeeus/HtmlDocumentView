@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "APElement.h"
 
 @interface OQStyleBase : NSObject {
     
 }
-
+-(void)applyToElement:(APElement*)element;
 @end

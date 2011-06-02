@@ -10,5 +10,17 @@
 
 
 @implementation OQBackgroundStyle
+@synthesize color;
 
+-(void) dealloc;
+{
+    [color release];
+    [super dealloc];
+}
+
+-(void)applyToElement:(APElement*)element;
+{
+    UIView *view = [element.HDVExtensions objectForKey:@"view"];
+    view.backgroundColor = self.color;
+}
 @end

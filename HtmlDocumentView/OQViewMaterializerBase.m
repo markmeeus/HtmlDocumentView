@@ -8,6 +8,7 @@
 
 #import "OQViewMaterializerBase.h"
 #import "APElement.h"
+#import "OQStyles.h"
 
 @implementation OQViewMaterializerBase
 @synthesize document;
@@ -32,6 +33,10 @@
     
     //create view for this element
     UIView* thisView = [materializer createViewForElement:element];
+    //this is the inner view, the background is set on the border frame, so this view needs to have a transparent background
+    //REFACTOR THIS OUT OF THIS CLASS
+    thisView.backgroundColor = [UIColor clearColor];
+    
     thisView = [self createBorderFrameAroundView:thisView];
     
     //add the view to the element
@@ -43,8 +48,19 @@
         UIView* childView = [self buildViewForElement:childElement];
         [thisView addSubview:childView];
     }
+    //and style the damn thing
+    [materializer applyStylesToViewForElement:element];
     return thisView;
 
+}
+
+-(void)applyStylesToViewForElement:(APElement*)element;
+{
+    OQStyleBase *style = [element.HDVExtensions objectForKey:@"style"];
+    if (style)
+    {
+        [style applyToElement:element];
+    }
 }
 
 -(UIView*)createBorderFrameAroundView:(UIView*)view;

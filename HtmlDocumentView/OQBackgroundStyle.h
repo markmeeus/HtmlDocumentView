@@ -12,5 +12,5 @@
 @interface OQBackgroundStyle : OQStyleBase {
     
 }
-
+@property (nonatomic, retain) UIColor* color;
 @end
