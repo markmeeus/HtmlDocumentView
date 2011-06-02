@@ -12,12 +12,12 @@
 
 
 @interface OQDocument : NSObject {
-    NSMutableDictionary* materializers;
+    APDocument *document;
 }
-@property (nonatomic, retain) NSMutableDictionary* materializers;
+@property (nonatomic, retain) APDocument *document;
 
--(void)registerViewMaterializer:(OQViewMaterializerBase*)materializer forDOMSelector:(NSString*)DOMSelector;
--(void)registerDefaultViewMaterializers;
+-(void)setMaterializer:(OQViewMaterializerBase*)materializer forOQSelectorString:(NSString*) selectorString;
+-(void)setDefaultMaterlializers;
 -(UIViewController*) controllerFromHtmlData:(NSData*)htmlData;
--(UIView*)viewFromDocument:(APDocument*)document;
+-(UIView*)viewFromDocument;
 @end

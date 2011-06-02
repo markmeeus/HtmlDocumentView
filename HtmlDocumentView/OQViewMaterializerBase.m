@@ -12,20 +12,6 @@
 @implementation OQViewMaterializerBase
 @synthesize document;
 
--(OQViewMaterializerBase*) initWithDocument:(id)theDocument;
-{
-    if(![self init])
-        return nil;
-    
-    self.document = theDocument;
-    return self;
-}
--(void)dealloc;
-{
-    [document release];
-    document = nil;
-    [super dealloc];
-}
 #pragma mark overridables
 -(UIView*)createViewForElement:(APElement*)element;
 {
@@ -34,7 +20,7 @@
 
 -(OQViewMaterializerBase*)getMaterializerForElement:(APElement*)element;
 {
-    return [[self.document materializers] objectForKey:element.name];
+    return [element.HDVExtensions objectForKey:@"materializer"];
 }
 
 -(UIView*)buildViewForElement:(APElement*)element;
@@ -42,7 +28,7 @@
     //first find a factory for this element
     OQViewMaterializerBase* materializer = [self getMaterializerForElement:(element)];
     if(!materializer)
-        materializer = [[[OQViewMaterializerBase alloc]initWithDocument:self.document] autorelease];
+        materializer = [[[OQViewMaterializerBase alloc]init] autorelease];
     
     //create view for this element
     UIView* thisView = [materializer createViewForElement:element];

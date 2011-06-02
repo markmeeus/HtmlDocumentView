@@ -10,10 +10,8 @@
 #import "APElement.h"
 
 @interface OQViewMaterializerBase : NSObject {
-    id document; //id allow for other document implementations. Duck typing
 }
 @property (nonatomic, retain) id document;
--(OQViewMaterializerBase*)initWithDocument:(id) document;
 -(OQViewMaterializerBase*)getMaterializerForElement:(APElement*)element;
 -(UIView*)buildViewForElement:(APElement*)element;
 -(UIView*)createViewForElement:(APElement*)element;

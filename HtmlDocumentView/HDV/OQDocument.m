@@ -12,36 +12,31 @@
 #import "OQDocument.h"
 #import "OQViewMaterializers.h"
 #import "LayoutEngine.h"
-
+#import "OQSelectors.h"
+#import "APElement.h"
 
 @implementation OQDocument
-@synthesize materializers;
 
-
--(OQDocument*) init;
-{
-    self = [super init];
-    materializers = [[NSMutableDictionary alloc]init];
-    [self registerDefaultViewMaterializers];
-    return self;
-}
 -(void)dealloc;
 {
-    [materializers release];
+    [document release];
     [super dealloc];
 }
-
--(void)registerDefaultViewMaterializers;
+-(void)setDefaultMaterlializers;
 {
-    [self registerViewMaterializer:[[[OQParagraphViewMaterializer alloc]init]autorelease] forDOMSelector:@"p"];
-    [self registerViewMaterializer:[[[OQImageViewMaterializer alloc]init]autorelease] forDOMSelector:@"img"];
-}
+    [self setMaterializer:[[[OQParagraphViewMaterializer alloc]init]autorelease] forOQSelectorString:@"p"];
+    [self setMaterializer:[[[OQImageViewMaterializer alloc]init]autorelease] forOQSelectorString:@"img"];
 
--(void)registerViewMaterializer:(OQViewMaterializerBase*)materializer forDOMSelector:(NSString*)DOMSelector;
+}
+-(void)setMaterializer:(OQViewMaterializerBase*)materializer forOQSelectorString:(NSString*) selectorString;
 {
-    [materializers setObject:materializer forKey:DOMSelector];    
+    NSArray *selectorChain = [OQSelectorChainBuilder buildSelectorChainForString:selectorString];
+    NSArray *selectedElements = [OQChainSelector selectAllElementsForSelectorChain:selectorChain startingFromElement:document.rootElement];
+    for(APElement *element in selectedElements)
+    {
+        [element.HDVExtensions setObject:materializer forKey:@"materializer"];
+    }
 }
-
 -(UIViewController*) controllerFromHtmlData:(NSData*)htmlData;
 {
     //data to string
@@ -49,14 +44,17 @@
                                                   length:[htmlData length] encoding: NSUTF8StringEncoding];
 
     //string to document
-    APDocument* document = [APDocument documentWithXMLString:htmlString];
+    document = [APDocument documentWithXMLString:htmlString];
     [htmlString release];
 
+    //add default materializers:
+    [self setDefaultMaterlializers];
+    
     //create controller
     UIViewController* controller = [[UIViewController alloc]init];
     
     //convert the document to the view
-    UIView* view = [self viewFromDocument:document];
+    UIView* view = [self viewFromDocument];
     
     //start the layout engine!
     CGPoint point = CGPointMake(0, 0);
@@ -70,10 +68,10 @@
     return controller;
 }
 
--(UIView*)viewFromDocument:(APDocument*)document;
+-(UIView*)viewFromDocument;
 {
     //Create a base materializer and make it build the view
-    OQViewMaterializerBase* materializer = [[OQViewMaterializerBase alloc] initWithDocument:self];
+    OQViewMaterializerBase* materializer = [[OQViewMaterializerBase alloc] init];
     
     UIView* view = [materializer buildViewForElement:document.rootElement];
     

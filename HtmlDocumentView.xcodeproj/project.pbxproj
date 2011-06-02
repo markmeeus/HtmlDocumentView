@@ -16,6 +16,11 @@
 		360460AC1371D0F3004D1390 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360460AA1371D0F3004D1390 /* MainWindow.xib */; };
 		360460BC1371D464004D1390 /* OQDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 360460BA1371D464004D1390 /* OQDocument.m */; };
 		360460BE1371D48D004D1390 /* root.html in Resources */ = {isa = PBXBuildFile; fileRef = 360460BD1371D48D004D1390 /* root.html */; };
+		36053BD213977E4A00297955 /* OQStyleBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 36053BD113977E4A00297955 /* OQStyleBase.m */; };
+		36053BD513977E6200297955 /* OQPositionStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 36053BD413977E6200297955 /* OQPositionStyle.m */; };
+		36053BD813977E7C00297955 /* OQBackgroundStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 36053BD713977E7C00297955 /* OQBackgroundStyle.m */; };
+		36053BDB13977E8B00297955 /* OQFontStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 36053BDA13977E8B00297955 /* OQFontStyle.m */; };
+		36053BDE13977E9F00297955 /* OQBorderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 36053BDD13977E9F00297955 /* OQBorderStyle.m */; };
 		364D8AC91386F7A3000859DB /* OQViewMaterializerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D8AC81386F7A3000859DB /* OQViewMaterializerBase.m */; };
 		364D8ACC1386F8D2000859DB /* OQParagraphViewMaterializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D8ACB1386F8D2000859DB /* OQParagraphViewMaterializer.m */; };
 		36561C60138706E40062C55E /* OQImageViewMaterializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36561C5F138706E40062C55E /* OQImageViewMaterializer.m */; };
@@ -58,6 +63,18 @@
 		360460BA1371D464004D1390 /* OQDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OQDocument.m; path = HDV/OQDocument.m; sourceTree = "<group>"; };
 		360460BB1371D464004D1390 /* OQDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OQDocument.h; path = HDV/OQDocument.h; sourceTree = "<group>"; };
 		360460BD1371D48D004D1390 /* root.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = root.html; sourceTree = "<group>"; };
+		36053BD013977E4A00297955 /* OQStyleBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQStyleBase.h; sourceTree = "<group>"; };
+		36053BD113977E4A00297955 /* OQStyleBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQStyleBase.m; sourceTree = "<group>"; };
+		36053BD313977E6200297955 /* OQPositionStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQPositionStyle.h; sourceTree = "<group>"; };
+		36053BD413977E6200297955 /* OQPositionStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQPositionStyle.m; sourceTree = "<group>"; };
+		36053BD613977E7C00297955 /* OQBackgroundStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQBackgroundStyle.h; sourceTree = "<group>"; };
+		36053BD713977E7C00297955 /* OQBackgroundStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQBackgroundStyle.m; sourceTree = "<group>"; };
+		36053BD913977E8B00297955 /* OQFontStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQFontStyle.h; sourceTree = "<group>"; };
+		36053BDA13977E8B00297955 /* OQFontStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQFontStyle.m; sourceTree = "<group>"; };
+		36053BDC13977E9F00297955 /* OQBorderStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQBorderStyle.h; sourceTree = "<group>"; };
+		36053BDD13977E9F00297955 /* OQBorderStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQBorderStyle.m; sourceTree = "<group>"; };
+		36053BDF13977EE200297955 /* OQStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQStyles.h; sourceTree = "<group>"; };
+		36053BE013977FAC00297955 /* OQSelectors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQSelectors.h; sourceTree = "<group>"; };
 		360EDBF0138ECF7E00F2877E /* OQViewMaterializers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQViewMaterializers.h; sourceTree = "<group>"; };
 		364D8AC71386F7A3000859DB /* OQViewMaterializerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQViewMaterializerBase.h; sourceTree = "<group>"; };
 		364D8AC81386F7A3000859DB /* OQViewMaterializerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQViewMaterializerBase.m; sourceTree = "<group>"; };
@@ -173,6 +190,7 @@
 		360460B21371D0F9004D1390 /* OQuery */ = {
 			isa = PBXGroup;
 			children = (
+				36053BCE13977E2E00297955 /* Styles */,
 				36E59BC213952A8E00501ABA /* Selectors */,
 				364D8AC61386F77E000859DB /* Materlializers */,
 				36F3C1B2137DC4B200F8B5C1 /* Support */,
@@ -196,6 +214,24 @@
 				36DD0CCC1371E3D200BFEDA1 /* APAttribute.h */,
 			);
 			name = Parsers;
+			sourceTree = "<group>";
+		};
+		36053BCE13977E2E00297955 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				36053BD013977E4A00297955 /* OQStyleBase.h */,
+				36053BD113977E4A00297955 /* OQStyleBase.m */,
+				36053BD313977E6200297955 /* OQPositionStyle.h */,
+				36053BD413977E6200297955 /* OQPositionStyle.m */,
+				36053BD613977E7C00297955 /* OQBackgroundStyle.h */,
+				36053BD713977E7C00297955 /* OQBackgroundStyle.m */,
+				36053BD913977E8B00297955 /* OQFontStyle.h */,
+				36053BDA13977E8B00297955 /* OQFontStyle.m */,
+				36053BDC13977E9F00297955 /* OQBorderStyle.h */,
+				36053BDD13977E9F00297955 /* OQBorderStyle.m */,
+				36053BDF13977EE200297955 /* OQStyles.h */,
+			);
+			name = Styles;
 			sourceTree = "<group>";
 		};
 		364D8AC61386F77E000859DB /* Materlializers */ = {
@@ -254,6 +290,7 @@
 				365955B313957A180098EACD /* OQAttributeValueSelector.m */,
 				365955BF13958C590098EACD /* OQChainSelector.h */,
 				365955C013958C590098EACD /* OQChainSelector.m */,
+				36053BE013977FAC00297955 /* OQSelectors.h */,
 			);
 			name = Selectors;
 			sourceTree = "<group>";
@@ -396,6 +433,11 @@
 				36E59BC813952B3500501ABA /* OQElementSelector.m in Sources */,
 				365955B413957A180098EACD /* OQAttributeValueSelector.m in Sources */,
 				365955C113958C590098EACD /* OQChainSelector.m in Sources */,
+				36053BD213977E4A00297955 /* OQStyleBase.m in Sources */,
+				36053BD513977E6200297955 /* OQPositionStyle.m in Sources */,
+				36053BD813977E7C00297955 /* OQBackgroundStyle.m in Sources */,
+				36053BDB13977E8B00297955 /* OQFontStyle.m in Sources */,
+				36053BDE13977E9F00297955 /* OQBorderStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
