@@ -26,6 +26,7 @@
 //attach objects to elements
 -(void)attachObject:(id)object toElementsMatchingSelectorString:(NSString*)selectorString usingKey:(NSString*) key;
 
--(UIViewController*) controllerFromHtmlData:(NSData*)htmlData;
+-(BOOL) loadDocument:(NSData*)htmlData;
+-(UIViewController*) buildController;
 -(UIView*)viewFromDocument;
 @end

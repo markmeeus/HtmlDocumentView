@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "OQDocument.h"
 @interface HtmlDocumentViewAppDelegate : NSObject <UIApplicationDelegate> {
 
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-
+-(void)addTestStylesToDocument:(OQDocument*)document;
 @end

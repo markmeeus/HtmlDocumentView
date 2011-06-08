@@ -12,5 +12,6 @@
 @interface OQFontStyle : OQStyleBase {
     
 }
-
+@property (nonatomic, retain) NSString *fontName;
+@property (nonatomic) int size;
 @end

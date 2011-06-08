@@ -15,6 +15,7 @@
 -(OQViewMaterializerBase*)getMaterializerForElement:(APElement*)element;
 -(void)applyStylesToViewForElement:(APElement*)element;
 -(UIView*)buildViewForElement:(APElement*)element;
+-(void)addSubView:(UIView*)subView ToElement:(APElement*)element;
 -(UIView*)createViewForElement:(APElement*)element;
 -(UIView*)createBorderFrameAroundView:(UIView*)view;
 @end

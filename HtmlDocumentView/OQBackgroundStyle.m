@@ -20,7 +20,11 @@
 
 -(void)applyToElement:(APElement*)element;
 {
-    UIView *view = [element.HDVExtensions objectForKey:@"view"];
+    
+    UIView *view = [element.HDVExtensions objectForKey:@"innerView"];
+    view.backgroundColor = [UIColor clearColor];
+    
+    view = [element.HDVExtensions objectForKey:@"view"];
     view.backgroundColor = self.color;
 }
 @end

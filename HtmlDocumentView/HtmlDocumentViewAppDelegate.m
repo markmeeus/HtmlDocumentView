@@ -21,7 +21,12 @@
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"root" ofType:@"html"];  
     NSData *htmlData = [NSData dataWithContentsOfFile:filePath];
     OQDocument* document = [[OQDocument alloc]init];
-    self.window.rootViewController = [document controllerFromHtmlData:htmlData];
+    [document loadDocument:htmlData];
+    
+    [self addTestStylesToDocument:document];
+    
+    
+    self.window.rootViewController = [document buildController];
     [self.window makeKeyAndVisible];
 
     [document release];
@@ -71,6 +76,25 @@
 {
     [_window release];
     [super dealloc];
+}
+
+#pragma mark test methods
+-(void)addTestStylesToDocument:(OQDocument*)document;
+{
+    //add some styles
+    OQBackgroundStyle* backgroundStyle = [[[OQBackgroundStyle alloc]init]autorelease];
+    backgroundStyle.color = [UIColor redColor];
+    [document setStyle:backgroundStyle forOQSelectorString:@"p"];        
+ 
+    OQFontStyle *fontStyle = [[[OQFontStyle alloc]init]autorelease];
+    fontStyle.fontName = @"American Typewriter";
+    fontStyle.size = 15;
+    [document setStyle:fontStyle forOQSelectorString:@"p"];   
+    
+    OQBorderStyle *borderStyle = [[[OQBorderStyle alloc]init]autorelease];
+    borderStyle.borderColor = [UIColor greenColor];
+    borderStyle.borderWidth = 3,2;
+    [document setStyle:borderStyle forOQSelectorString:@"p.bordered"];
 }
 
 @end

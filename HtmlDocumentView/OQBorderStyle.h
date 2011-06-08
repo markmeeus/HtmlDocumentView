@@ -10,7 +10,9 @@
 #import "OQStyleBase.h"
 
 @interface OQBorderStyle : OQStyleBase {
-    
+    UIColor *borderColor;
+    float borderWidth;
 }
-
+@property (nonatomic, retain) UIColor *borderColor;
+@property (nonatomic) float borderWidth;
 @end

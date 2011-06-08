@@ -7,8 +7,17 @@
 //
 
 #import "OQBorderStyle.h"
-
+#import <QuartzCore/QuartzCore.h>
 
 @implementation OQBorderStyle
+@synthesize borderColor;
+@synthesize borderWidth;
 
+-(void)applyToElement:(APElement *)element;
+{
+    //add border around view
+    UIView *view = [element.HDVExtensions objectForKey:@"view"];    
+    [view.layer setBorderColor: [[self borderColor] CGColor]];
+    [view.layer setBorderWidth: self.borderWidth];    
+}
 @end

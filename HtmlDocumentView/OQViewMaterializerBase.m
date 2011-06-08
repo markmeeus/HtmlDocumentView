@@ -26,38 +26,48 @@
 
 -(UIView*)buildViewForElement:(APElement*)element;
 {
-    //first find a factory for this element
-    OQViewMaterializerBase* materializer = [self getMaterializerForElement:(element)];
-    if(!materializer)
-        materializer = [[[OQViewMaterializerBase alloc]init] autorelease];
-    
     //create view for this element
-    UIView* thisView = [materializer createViewForElement:element];
-    //this is the inner view, the background is set on the border frame, so this view needs to have a transparent background
-    //REFACTOR THIS OUT OF THIS CLASS
-    thisView.backgroundColor = [UIColor clearColor];
+    UIView* thisView = [self createViewForElement:element];
+
+    //add the inner view to the element
+    [element.HDVExtensions setObject:thisView forKey:@"innerView"];
     
+    //create the border/background frame
     thisView = [self createBorderFrameAroundView:thisView];
     
     //add the view to the element
     [element.HDVExtensions setObject:thisView forKey:@"view"];
     
-    //build all child element and add as subview
+    //build all child elements and add as subview
     for(APElement* childElement in element.childElements)
-    {        
-        UIView* childView = [self buildViewForElement:childElement];
-        [thisView addSubview:childView];
+    { 
+        //first find a factory for this element
+        OQViewMaterializerBase* materializer = [self getMaterializerForElement:(childElement)];
+        if(!materializer)
+            materializer = [[OQViewMaterializerBase alloc]init];
+        
+        UIView* childView = [materializer buildViewForElement:childElement];
+        [materializer addSubView:childView ToElement:element];
     }
+    
     //and style the damn thing
-    [materializer applyStylesToViewForElement:element];
+    [self applyStylesToViewForElement:element];
     return thisView;
 
+}
+-(void)addSubView:(UIView*)subView ToElement:(APElement*)element;
+{
+    UIView* view = [element.HDVExtensions objectForKey:@"view"];
+    [view addSubview:subView];
 }
 
 -(void)applyStylesToViewForElement:(APElement*)element;
 {
-    OQStyleBase *style = [element.HDVExtensions objectForKey:@"style"];
-    if (style)
+    NSArray *styles = [element.HDVExtensions objectForKey:@"styles"];
+    if(styles==nil)
+        return;//no styles, bail out
+    
+    for(OQStyleBase *style in styles)
     {
         [style applyToElement:element];
     }

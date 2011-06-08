@@ -8,7 +8,7 @@
 
 #import "LayoutEngine.h"
 #import "APElement.h"
-#import <QuartzCore/QuartzCore.h>
+
 
 
 @implementation LayoutEngine
@@ -36,11 +36,6 @@
     //add the height of the childframes
     thisFrame = CGRectMake(point.x, point.y , thisFrame.size.width, thisFrame.size.height );
     thisView.frame = thisFrame;                       
-    
-    //add border around view
-    [thisView.layer setBorderColor: [[UIColor blackColor] CGColor]];
-    [thisView.layer setBorderWidth: 2.0];
-
     
     return thisFrame;
 }

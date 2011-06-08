@@ -34,19 +34,6 @@
 {
     [self attachObject:materializer toElementsMatchingSelectorString:selectorString usingKey:@"materializer"];
 }
-#pragma mark styles
--(void)setStyle:(OQStyleBase*)style forOQSelectorString:(NSString*) selectorString;
-{
-    [self attachObject:style toElementsMatchingSelectorString:selectorString usingKey:@"style"];
-}
-
--(void)setDefaultStyles;
-{
-    //test code, REMOVE PLEASE
-    OQBackgroundStyle* backgroundStyle = [[[OQBackgroundStyle alloc]init]autorelease];
-    backgroundStyle.color = [UIColor redColor];
-    [self setStyle:backgroundStyle forOQSelectorString:@"p"];
-}
 -(void)attachObject:(id)object toElementsMatchingSelectorString:(NSString*)selectorString usingKey:(NSString*) key;
 {
     
@@ -57,16 +44,45 @@
         [element.HDVExtensions setObject:object forKey:key];
     }   
 }
--(UIViewController*) controllerFromHtmlData:(NSData*)htmlData;
+
+#pragma mark styles
+-(void)setStyle:(OQStyleBase*)style forOQSelectorString:(NSString*) selectorString;
+{
+    NSArray *selectorChain = [OQSelectorChainBuilder buildSelectorChainForString:selectorString];
+    NSArray *selectedElements = [OQChainSelector selectAllElementsForSelectorChain:selectorChain startingFromElement:document.rootElement];
+    for(APElement *element in selectedElements)
+    {
+        NSMutableArray *styles = [element.HDVExtensions objectForKey:@"styles"];
+        if(styles==nil)
+        {
+            styles = [NSMutableArray array];
+            [element.HDVExtensions setObject:styles forKey:@"styles"];
+        }
+        [styles addObject:style];
+    }
+}
+
+-(void)setDefaultStyles;
+{
+    //method stub for default styles
+}
+
+-(BOOL) loadDocument:(NSData*)htmlData;
 {
     //data to string
     NSString *htmlString = [[NSString alloc]  initWithBytes:[htmlData bytes]
-                                                  length:[htmlData length] encoding: NSUTF8StringEncoding];
-
+                                                     length:[htmlData length] encoding: NSUTF8StringEncoding];
+    
     //string to document
     self.document = [APDocument documentWithXMLString:htmlString];
     [htmlString release];
 
+    return TRUE;
+}
+
+-(UIViewController*) buildController;
+{
+    
     //add default materializers:
     [self setDefaultMaterlializers];
 
