@@ -21,6 +21,7 @@
 		36053BD813977E7C00297955 /* OQBackgroundStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 36053BD713977E7C00297955 /* OQBackgroundStyle.m */; };
 		36053BDB13977E8B00297955 /* OQFontStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 36053BDA13977E8B00297955 /* OQFontStyle.m */; };
 		36053BDE13977E9F00297955 /* OQBorderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 36053BDD13977E9F00297955 /* OQBorderStyle.m */; };
+		363F3FC013A008BD00203253 /* OQButtonViewMaterializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 363F3FBF13A008BD00203253 /* OQButtonViewMaterializer.m */; };
 		364D8AC91386F7A3000859DB /* OQViewMaterializerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D8AC81386F7A3000859DB /* OQViewMaterializerBase.m */; };
 		364D8ACC1386F8D2000859DB /* OQParagraphViewMaterializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D8ACB1386F8D2000859DB /* OQParagraphViewMaterializer.m */; };
 		36561C60138706E40062C55E /* OQImageViewMaterializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36561C5F138706E40062C55E /* OQImageViewMaterializer.m */; };
@@ -76,6 +77,8 @@
 		36053BDF13977EE200297955 /* OQStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQStyles.h; sourceTree = "<group>"; };
 		36053BE013977FAC00297955 /* OQSelectors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQSelectors.h; sourceTree = "<group>"; };
 		360EDBF0138ECF7E00F2877E /* OQViewMaterializers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQViewMaterializers.h; sourceTree = "<group>"; };
+		363F3FBE13A008BD00203253 /* OQButtonViewMaterializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQButtonViewMaterializer.h; sourceTree = "<group>"; };
+		363F3FBF13A008BD00203253 /* OQButtonViewMaterializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQButtonViewMaterializer.m; sourceTree = "<group>"; };
 		364D8AC71386F7A3000859DB /* OQViewMaterializerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQViewMaterializerBase.h; sourceTree = "<group>"; };
 		364D8AC81386F7A3000859DB /* OQViewMaterializerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OQViewMaterializerBase.m; sourceTree = "<group>"; };
 		364D8ACA1386F8D2000859DB /* OQParagraphViewMaterializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OQParagraphViewMaterializer.h; sourceTree = "<group>"; };
@@ -244,6 +247,8 @@
 				36561C5E138706E40062C55E /* OQImageViewMaterializer.h */,
 				36561C5F138706E40062C55E /* OQImageViewMaterializer.m */,
 				360EDBF0138ECF7E00F2877E /* OQViewMaterializers.h */,
+				363F3FBE13A008BD00203253 /* OQButtonViewMaterializer.h */,
+				363F3FBF13A008BD00203253 /* OQButtonViewMaterializer.m */,
 			);
 			name = Materlializers;
 			sourceTree = "<group>";
@@ -438,6 +443,7 @@
 				36053BD813977E7C00297955 /* OQBackgroundStyle.m in Sources */,
 				36053BDB13977E8B00297955 /* OQFontStyle.m in Sources */,
 				36053BDE13977E9F00297955 /* OQBorderStyle.m in Sources */,
+				363F3FC013A008BD00203253 /* OQButtonViewMaterializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,6 +28,7 @@
 {
     [self setMaterializer:[[[OQParagraphViewMaterializer alloc]init]autorelease] forOQSelectorString:@"p"];
     [self setMaterializer:[[[OQImageViewMaterializer alloc]init]autorelease] forOQSelectorString:@"img"];
+    [self setMaterializer:[[[OQButtonViewMaterializer alloc]init]autorelease] forOQSelectorString:@"a"];
 
 }
 -(void)setMaterializer:(OQViewMaterializerBase*)materializer forOQSelectorString:(NSString*) selectorString;

@@ -26,5 +26,6 @@
     
     view = [element.HDVExtensions objectForKey:@"view"];
     view.backgroundColor = self.color;
+    NSLog(@"VIEW HEIGHT: %@",view.frame.size.height);
 }
 @end

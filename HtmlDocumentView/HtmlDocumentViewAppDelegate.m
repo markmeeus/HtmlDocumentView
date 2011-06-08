@@ -83,8 +83,12 @@
 {
     //add some styles
     OQBackgroundStyle* backgroundStyle = [[[OQBackgroundStyle alloc]init]autorelease];
+    backgroundStyle.color = [UIColor yellowColor];
+    [document setStyle:backgroundStyle forOQSelectorString:@"body"];        
+
+    backgroundStyle = [[[OQBackgroundStyle alloc]init]autorelease];
     backgroundStyle.color = [UIColor redColor];
-    [document setStyle:backgroundStyle forOQSelectorString:@"p"];        
+    //[document setStyle:backgroundStyle forOQSelectorString:@"p"];        
  
     OQFontStyle *fontStyle = [[[OQFontStyle alloc]init]autorelease];
     fontStyle.fontName = @"American Typewriter";
@@ -93,7 +97,7 @@
     
     OQBorderStyle *borderStyle = [[[OQBorderStyle alloc]init]autorelease];
     borderStyle.borderColor = [UIColor greenColor];
-    borderStyle.borderWidth = 3,2;
+    borderStyle.borderWidth = 3.2;
     [document setStyle:borderStyle forOQSelectorString:@"p.bordered"];
 }
 
