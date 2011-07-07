@@ -2,3 +2,6 @@
 #import "OQImageViewMaterializer.h"
 #import "OQParagraphViewMaterializer.h"
 #import "OQButtonViewMaterializer.h"
+#import "OQScrollViewMaterializer.h"
+#import "OQTableViewMaterializer.h"
+#import "OQTableViewCellMaterializer.h"

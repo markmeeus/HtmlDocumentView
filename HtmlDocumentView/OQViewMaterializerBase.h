@@ -14,8 +14,10 @@
 @property (nonatomic, retain) id document;
 -(OQViewMaterializerBase*)getMaterializerForElement:(APElement*)element;
 -(void)applyStylesToViewForElement:(APElement*)element;
--(UIView*)buildViewForElement:(APElement*)element;
+-(UIView*)buildViewForElement:(APElement*)element atYPosition:(int)YPosition;
 -(void)addSubView:(UIView*)subView ToElement:(APElement*)element;
 -(UIView*)createViewForElement:(APElement*)element;
 -(UIView*)createBorderFrameAroundView:(UIView*)view;
+-(CGRect)processChildElementsOfElement:(APElement*)element forView:(UIView*)view;
+
 @end

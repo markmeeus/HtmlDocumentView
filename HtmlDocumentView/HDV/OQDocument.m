@@ -26,10 +26,11 @@
 #pragma mark materializers
 -(void)setDefaultMaterlializers;
 {
+//     [self setMaterializer:[[[OQScrollViewMaterializer alloc]init]autorelease] forOQSelectorString:@"body"];
     [self setMaterializer:[[[OQParagraphViewMaterializer alloc]init]autorelease] forOQSelectorString:@"p"];
     [self setMaterializer:[[[OQImageViewMaterializer alloc]init]autorelease] forOQSelectorString:@"img"];
     [self setMaterializer:[[[OQButtonViewMaterializer alloc]init]autorelease] forOQSelectorString:@"a"];
-
+    [self setMaterializer:[[[OQTableViewMaterializer alloc]init]autorelease] forOQSelectorString:@"ul"];
 }
 -(void)setMaterializer:(OQViewMaterializerBase*)materializer forOQSelectorString:(NSString*) selectorString;
 {
@@ -94,14 +95,15 @@
     UIViewController* controller = [[UIViewController alloc]init];
     
     //convert the document to the view
-    UIView* view = [self viewFromDocument];
+    UIScrollView* scrollView = [[[UIScrollView alloc]initWithFrame:CGRectMake(0,0,320, 480)]autorelease];
     
-    //start the layout engine!
-    CGPoint point = CGPointMake(0, 0);
-    [LayoutEngine layoutElement:document.rootElement startingAt:point];
-    
+    UIView *documentView = [self viewFromDocument];
+    scrollView.contentSize = CGSizeMake(1,documentView.frame.size.height);
+    scrollView.pagingEnabled = NO;
+    [scrollView addSubview:documentView];    
+        
     //assign to the controller
-    controller.view = view;
+    controller.view = scrollView;
     
     //done
     [controller autorelease];
@@ -113,7 +115,7 @@
     //Create a base materializer and make it build the view
     OQViewMaterializerBase* materializer = [[OQViewMaterializerBase alloc] init];
     
-    UIView* view = [materializer buildViewForElement:document.rootElement];
+    UIView* view = [materializer buildViewForElement:document.rootElement atYPosition:0];
     
     [materializer release];
     return view;
